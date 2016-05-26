@@ -1,42 +1,38 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Meri on 26/05/2016.
  */
 public class Halgorizmo {
-    private Mapa mapa;
+    private S mapa;
 
-    public void ejecutar(Mapa mapa)
+    public void ejecutar(S mapaPar)
     {
-        this.mapa = new Mapa();
+        this.mapa = mapaPar;
 
         final int[][] L = new int[mapa.nodos.size()][mapa.nodos.size()]; //Matriz de adyacencia
-        final int[][] G = new int[mapa.nodos.size()][mapa.nodos.size()]; //Costes
+        final List<Coste> G = new ArrayList<>();
 
         for (Nodo i : mapa.nodos)
         {
             for(Nodo j : mapa.nodos)
             {
-                G[i.id][j.id] = L[i.id][j.id] + L[j.id][1];
+                G.add(new Coste(i, j, L[i.id][j.id] + L[j.id][1]));
             }
         }
 
         for(int i = 1; i <= mapa.nodos.size() - 1; i++)
         {
-            for(int k = 1; k <= mapa.nodos.size(); k++)
+            for(int k = 1; k <= mapa.nodos.size() - 1; k++)
             {
+                for(Coste c : G)
+                {
+                    S s = c.conjunto;
 
+
+                }
             }
         }
-    }
-
-    private Mapa S(int i) //Subconjunto de i nodos
-    {
-        Mapa subconjunto = new Mapa();
-
-        for (int x = 0; x < i; x++)
-        {
-            subconjunto.nodos.add(mapa.nodos.get(x));
-        }
-
-        return subconjunto;
     }
 }

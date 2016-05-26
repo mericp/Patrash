@@ -4,10 +4,10 @@ import java.util.List;
 /**
  * Created by Meri on 26/05/2016.
  */
-public class Mapa {
+public class S { //conjunto de nodos (mapa)
     public final List<Nodo> nodos;
 
-    public Mapa() {
+    public S() {
         this.nodos = new ArrayList<>();
     }
 
