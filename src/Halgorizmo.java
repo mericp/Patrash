@@ -1,8 +1,3 @@
-package com.company;
-
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by Meri on 26/05/2016.
  */
