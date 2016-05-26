@@ -19,9 +19,9 @@ public class Halgorizmo {
             }
         }
 
-        for(int i = 2; i <= mapa.nodos.size() - 2; i++)
+        for(int i = 1; i <= mapa.nodos.size() - 1; i++)
         {
-            for(int k = 2; k <= mapa.nodos.size(); k++)
+            for(int k = 1; k <= mapa.nodos.size(); k++)
             {
 
             }
