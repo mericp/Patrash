@@ -6,7 +6,8 @@ public class Halgorizmo {
 
     public void ejecutar(Mapa mapa)
     {
-        mapa = new Mapa();
+        this.mapa = new Mapa();
+
         final int[][] L = new int[mapa.nodos.size()][mapa.nodos.size()]; //Matriz de adyacencia
         final int[][] G = new int[mapa.nodos.size()][mapa.nodos.size()]; //Costes
 
